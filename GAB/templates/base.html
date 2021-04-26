@@ -1,0 +1,17 @@
+<!doctype html>
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache">
+{% block css %}{% endblock %}
+<title>{% block title %}{% endblock %}</title>
+<nav>
+    <h1>Test</h1>
+</nav>
+<section class="content">
+    <heaer>
+        {% block header %}{% endblock %}
+    </heaer>
+    {% for message in get_flashed_messages() %}
+    <div class="flash">{{ message }}</div>
+    {% endfor %}
+    {% block content %}{% endblock %}
+</section>

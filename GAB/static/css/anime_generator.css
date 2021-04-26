@@ -1,0 +1,7 @@
+.anime_list input[type="checkbox"] {
+    display: none;
+}
+
+.anime_list input[type="checkbox"]:checked + label img{
+    filter: brightness(30%);
+}

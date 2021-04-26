@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block header %}
+    <h1>{% block title %}アニメ一覧{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+    {% for cool in cool_list %}
+    <a href="{{ '/anime/'+cool[0] }}"><li>{{ cool[1] }}</li></a>
+    {% endfor %}
+{% endblock %}
